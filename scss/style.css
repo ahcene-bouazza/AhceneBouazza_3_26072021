@@ -7,4 +7,38 @@ body {
   margin: 0;
   font-family: "roboto", sans-serif;
 }
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1em;
+  -webkit-box-shadow: 0em 0.2em 0.4em #b3b3b3;
+          box-shadow: 0em 0.2em 0.4em #b3b3b3;
+  position: relative;
+}
+
+header .header__return {
+  display: none;
+}
+
+.search__location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #EAEAEA;
+}
+
+.search__location__marker {
+  padding-right: 1em;
+}
 /*# sourceMappingURL=style.css.map */

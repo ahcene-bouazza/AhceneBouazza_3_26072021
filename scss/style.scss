@@ -1,12 +1,39 @@
-$prim-color: #9356DC;
-$sec-color: #FF79DA;
-$Tert-color: #99E2D0;
+$prim-clr: #9356DC;
+$sec-clr: #FF79DA;
+$Tert-clr: #99E2D0;
+$darken-gray-clr: #b3b3b3;
+$medium-gray-clr : #EAEAEA;
+$light-gray-clr:#F6F6F6;
+$grad-clr: linear-gradient(#ff79da, #9356dc);
 $font-size: 12px ;
 
 *{
 box-sizing: border-box;
 }
+
 body{
     margin: 0;
     font-family: "roboto", sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    box-shadow: 0em .2em 0.4em $darken-gray-clr;
+    position: relative;
+    
+    .header__return{
+        display: none;
+    }
+}
+
+.search__location{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $medium-gray-clr;
+    &__marker{
+        padding-right: 1em;
+    }
 }

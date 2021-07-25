@@ -1,11 +1,13 @@
 $prim-clr: #9356DC;
 $sec-clr: #FF79DA;
 $Tert-clr: #99E2D0;
-$darken-gray-clr: #b3b3b3;
+$icon-gray-clr: #686868;
+$darken-gray-clr: #c7c7c7;
 $medium-gray-clr : #EAEAEA;
 $light-gray-clr:#F6F6F6;
 $grad-clr: linear-gradient(#ff79da, #9356dc);
 $font-size: 12px ;
+$card-shaddow : 0em .2em 0.6em rgb(212, 212, 212);
 
 *{
 box-sizing: border-box;
@@ -28,12 +30,79 @@ header{
     }
 }
 
-.search__location{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $medium-gray-clr;
-    &__marker{
-        padding-right: 1em;
+.search{
+
+    &__location{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $medium-gray-clr;
+        margin: 0px;
+        &__marker{
+            padding-right: 1em;
+        }
+    }
+
+    &__hero{
+        background-color: $light-gray-clr;
+        padding: 2em;
+        text-align: center;
+        h1{
+            margin: 0;
+        }
+        a{
+            display: inline-block;
+            text-decoration: none;
+            margin-top: .6em;
+            padding: 0.6em 1em ;
+            background-image: $grad-clr;
+            background-position: top;
+            border-radius: 2em;
+            color: white;
+        }
     }
 }
+
+.instruction{
+
+    &__title{
+        margin: 0.7em;
+    }
+    &__wraper{
+        margin : 0 1em;
+        display: flex;
+        align-items: center;
+        padding : .5em 0;
+
+        .wraper__number {
+            background-color: $prim-clr;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.3em 0.6em;
+            color: white;
+            border-radius: 50%;
+            font-size: 0.8em;
+        }
+
+        .wraper__info {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            border-radius: .8em;
+            box-shadow: $card-shaddow;
+            background-color: $light-gray-clr;
+            margin-left: -0.7em;
+            padding: 0 2em;
+            z-index: -1;
+                .wraper__info__icon{
+                 color: $icon-gray-clr;
+                 margin-right: 1em;
+                }
+            }
+        }
+
+
+}   
+
+

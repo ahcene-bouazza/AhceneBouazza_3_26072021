@@ -65,6 +65,10 @@ header .header__return {
   color: white;
 }
 
+.instruction {
+  margin-top: 2em;
+}
+
 .instruction__title {
   margin: 0.7em;
 }
@@ -95,6 +99,7 @@ header .header__return {
   color: white;
   border-radius: 50%;
   font-size: 0.8em;
+  z-index: 1;
 }
 
 .instruction__wraper .wraper__info {
@@ -111,11 +116,133 @@ header .header__return {
   background-color: #F6F6F6;
   margin-left: -0.7em;
   padding: 0 2em;
-  z-index: -1;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
 }
 
 .instruction__wraper .wraper__info .wraper__info__icon {
   color: #686868;
   margin-right: 1em;
+}
+
+.instruction__wraper .wraper__info:hover {
+  background-color: rgba(147, 86, 220, 0.5);
+}
+
+.instruction__wraper .wraper__info:hover .wraper__info__icon {
+  color: #9356DC;
+}
+
+.result {
+  background-color: #F6F6F6;
+  margin-top: 3em;
+  padding: 1em;
+}
+
+.result__card {
+  cursor: pointer;
+  background-color: white;
+  -webkit-box-shadow: 0em 0.2em 0.6em #d4d4d4;
+          box-shadow: 0em 0.2em 0.6em #d4d4d4;
+  border-radius: 1.5em;
+  overflow: hidden;
+  margin-bottom: 2em;
+}
+
+.result__card__banner {
+  position: relative;
+}
+
+.result__card__banner__img {
+  height: 15em;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+
+.result__card__banner__label {
+  background-color: #99E2D0;
+  border-radius: 0.2em;
+  padding: .5em 1em;
+  color: #2c9c81;
+  font-weight: 700;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+
+.result__card__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1em;
+}
+
+.result__card__info h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.result__card__info__icon .fa-heart {
+  font-size: 2em;
+}
+
+.result__card__info__icon .heart1 {
+  display: none;
+}
+
+.result__card__info__icon .heart2 {
+  display: inline-block;
+}
+
+.result__card__info__icon:hover .heart1 {
+  display: inline-block;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(#ff79da, #9356dc);
+  background-clip: text;
+  color: transparent;
+}
+
+.result__card__info__icon:hover .heart2 {
+  display: none;
+}
+
+.footer {
+  background-color: #353535;
+  color: white;
+  padding: 1em;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer__li {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0.5em;
+}
+
+.footer__li__icon {
+  margin-right: 1em;
+}
+
+.footer__li .fa-hands-helping {
+  width: 0.8em;
+}
+
+.footer_logo {
+  fill: white;
+  width: 7em;
 }
 /*# sourceMappingURL=style.css.map */

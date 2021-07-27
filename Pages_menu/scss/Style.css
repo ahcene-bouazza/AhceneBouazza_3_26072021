@@ -1,3 +1,29 @@
+@-webkit-keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -99,6 +125,21 @@ header .header__return {
   background-color: #99E2D0;
 }
 
+.menu .menu__item:nth-child(1) {
+  -webkit-animation-delay: 80ms;
+          animation-delay: 80ms;
+}
+
+.menu .menu__item:nth-child(2) {
+  -webkit-animation-delay: 160ms;
+          animation-delay: 160ms;
+}
+
+.menu .menu__item:nth-child(3) {
+  -webkit-animation-delay: 240ms;
+          animation-delay: 240ms;
+}
+
 .menu__item {
   margin: 1em;
   display: -webkit-box;
@@ -112,6 +153,8 @@ header .header__return {
   -webkit-box-shadow: 0em 0.2em 0.6em #d4d4d4;
           box-shadow: 0em 0.2em 0.6em #d4d4d4;
   overflow: hidden;
+  -webkit-animation: slideUp 900ms ease-in-out 1;
+          animation: slideUp 900ms ease-in-out 1;
 }
 
 .menu__item__info {
@@ -174,6 +217,8 @@ header .header__return {
       -ms-flex-align: center;
           align-items: center;
   background-color: #99E2D0;
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
   -webkit-transition: width 300ms ease-in-out;
   transition: width 300ms ease-in-out;
 }
@@ -181,10 +226,19 @@ header .header__return {
 .menu__item__checkmark .fa-check-circle {
   font-size: 1.5em;
   color: white;
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
 }
 
 .menu__item:hover .menu__item__checkmark {
   width: 4em;
+}
+
+.menu__item:hover .menu__item__checkmark .fa-check-circle {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 
 .menu__meals {

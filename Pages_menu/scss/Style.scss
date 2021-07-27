@@ -9,6 +9,19 @@ $footer-clr:#353535;
 $grad-clr: linear-gradient(#ff79da, #9356dc);
 $font-size: 12px ;
 $card-shaddow : 0em .2em 0.6em rgb(212, 212, 212);
+$delay: 300ms ;
+
+@keyframes slideUp {
+    0%{
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 
 *{
 box-sizing: border-box;
@@ -93,6 +106,12 @@ header{
         }
     }
 
+    @for $i from 1 through 3 {
+        .menu__item:nth-child(#{$i}) {
+            animation-delay:  (80ms) * $i;
+        }
+    }
+    
     &__item{
         margin: 1em;
         display: flex;
@@ -101,7 +120,8 @@ header{
         border-radius: 1em;
         box-shadow: $card-shaddow;
         overflow: hidden;
-        
+        animation: slideUp 900ms ease-in-out 1 ;
+
         &__info{
         padding: .6em;
         flex: 1;
@@ -143,16 +163,22 @@ header{
             justify-content: center;
             align-items: center;
             background-color: $tert-clr;
+            transform: rotate(0);
             transition: width 300ms ease-in-out;
             
             .fa-check-circle{
                 font-size: 1.5em;
                 color: white;
+                transition: transform 300ms ease-in-out,
             }
         }
 
         &:hover &__checkmark {
               width: 4em;
+
+              .fa-check-circle{
+              transform: rotate(360deg);
+            }
         }
 
     }
@@ -177,12 +203,6 @@ header{
     }
 
 }
-
-
-
-
-    
-
 
 
 .footer{

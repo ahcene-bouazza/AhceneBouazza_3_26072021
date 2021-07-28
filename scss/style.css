@@ -177,20 +177,21 @@ body {
           animation: spin2 1.3s linear 3 both;
 }
 
-header {
+.header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 1em;
+  padding: 0.5em;
+  padding-top: 0.6em;
   -webkit-box-shadow: 0em 0.2em 0.4em #c7c7c7;
           box-shadow: 0em 0.2em 0.4em #c7c7c7;
   position: relative;
 }
 
-header .header__return {
+.header__return {
   display: none;
 }
 
@@ -309,6 +310,9 @@ header .header__return {
 }
 
 .result__card {
+  color: inherit;
+  text-decoration: none;
+  display: block;
   cursor: pointer;
   background-color: white;
   -webkit-box-shadow: 0em 0.2em 0.6em #d4d4d4;
@@ -316,6 +320,9 @@ header .header__return {
   border-radius: 1.5em;
   overflow: hidden;
   margin-bottom: 2em;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .result__card__banner {
@@ -329,6 +336,11 @@ header .header__return {
      object-fit: cover;
   -o-object-position: bottom;
      object-position: bottom;
+}
+
+.result__card__banner__img2 {
+  -o-object-position: center;
+     object-position: center;
 }
 
 .result__card__banner__label {
@@ -428,37 +440,39 @@ header .header__return {
   }
 }
 
-.header-menu {
+.header_mobile {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 1em;
+  padding: 0.5em;
+  padding-top: 0.6em;
   -webkit-box-shadow: 0em 0.2em 0.4em #c7c7c7;
           box-shadow: 0em 0.2em 0.4em #c7c7c7;
   position: relative;
 }
 
-.header-menu a:visited {
-  color: black;
+.header_mobile a:visited {
+  color: inherit;
 }
 
-.header-menu .header__return {
+.header_mobile .header__return {
   display: inline-block;
   position: absolute;
-  bottom: .5em;
-  left: 1em;
-  font-size: 2em;
+  font-size: 1.6em;
+  left: 2em;
+  top: 0.6em;
+  margin: 0;
+  padding: 0;
 }
 
 .hero__img {
   width: 100%;
-  height: auto;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .menu {
@@ -777,6 +791,7 @@ header .header__return {
   }
   .footer__li {
     padding-right: 1em;
+    margin: 0;
   }
   .footer .footer_logo {
     margin-right: auto;

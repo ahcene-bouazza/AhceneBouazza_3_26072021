@@ -28,14 +28,15 @@
         }
     }
     
-header{
+.header{
         display: flex;
         justify-content: center;
-        padding: 1em;
+        padding: 0.5em;
+        padding-top: 0.6em;
         box-shadow: 0em .2em 0.4em $darken-gray-clr;
         position: relative;
-        
-        .header__return{
+
+        &__return{
             display: none;
         }
     }
@@ -126,20 +127,27 @@ header{
         padding: 1em;
        
         &__card {
+            color: inherit;
+            text-decoration: none;
+            display: block;
             cursor: pointer;
             background-color: white;
             box-shadow: $card-shaddow;
             border-radius: 1.5em;
             overflow: hidden;
             margin-bottom: 2em;
+            flex: 1;
             
             &__banner{
             position: relative;
                 &__img{
                     height: 15em;
                     width: 100%;
-                    object-fit: cover;
+                    object-fit: cover ;
                     object-position: bottom;
+                }
+                &__img2{
+                    object-position: center;
                 }
                 &__label{
                     background-color: $tert-clr;

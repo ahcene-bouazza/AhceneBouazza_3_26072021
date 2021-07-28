@@ -1,26 +1,31 @@
-.header-menu{
+.header_mobile{
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 1em;
+    padding: 0.5em;
+    padding-top: 0.6em;
     box-shadow: 0em .2em 0.4em $darken-gray-clr;
     position: relative;
+
     a:visited{
-        color: black;
+        color: inherit;
     }
+
     .header__return{
         display: inline-block;
         position: absolute;
-        bottom: .5em;
-        left: 1em;
-        font-size: 2em;
+        font-size: 1.6em;
+        left: 2em;
+        top: 0.6em;
+        margin: 0;
+        padding: 0 ;
     }
 }
 
 .hero{
     &__img{
         width: 100%;
-        height: auto;
+        height: 300px;
+        object-fit: cover;
     }
 }
 

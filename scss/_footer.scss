@@ -3,6 +3,7 @@
     color: white;
     padding: 1em;
 
+
     p{
         margin: 0;
     }
@@ -15,6 +16,7 @@
         display: flex;
         align-items: center;
         margin-bottom: 0.5em;
+
         
         a{
         color: inherit;
@@ -42,13 +44,17 @@
 @media all and (min-width: 768px){
     
 .footer{
-    display: flex;
+display: flex;
+
 &__ul{
     display: flex;
 }
+
 &__li{
     padding-right: 1em;
+    margin: 0;
 }
+
 .footer_logo{
     margin-right: auto;
 }

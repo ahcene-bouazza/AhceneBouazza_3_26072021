@@ -6,12 +6,20 @@
     p{
         margin: 0;
     }
-
+    &__ul{
+        padding: 0 2em;
+    }
     &__li{
+        cursor: pointer;
         list-style-type: none;
         display: flex;
         align-items: center;
         margin-bottom: 0.5em;
+        
+        a{
+        color: inherit;
+        text-decoration: none;
+        }
 
         &__icon{
             margin-right: 1em;
@@ -22,7 +30,29 @@
     }
 
     &_logo{
+        margin-top: 0.5em;
+        margin-left: 2em;
         fill: white;
-        width: 7em;
+        svg{
+            width: 7em;
+        }
     }
+}
+
+@media all and (min-width: 768px){
+    
+.footer{
+    display: flex;
+&__ul{
+    display: flex;
+}
+&__li{
+    padding-right: 1em;
+}
+.footer_logo{
+    margin-right: auto;
+}
+
+    }
+
 }

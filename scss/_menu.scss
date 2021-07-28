@@ -5,13 +5,15 @@
     padding: 1em;
     box-shadow: 0em .2em 0.4em $darken-gray-clr;
     position: relative;
-    
+    a:visited{
+        color: black;
+    }
     .header__return{
-        display: flex;
+        display: inline-block;
         position: absolute;
+        bottom: .5em;
         left: 1em;
         font-size: 2em;
-        
     }
 }
 
@@ -25,6 +27,7 @@
 .menu{
     background-color: $light-gray-clr;
     margin-top: -50px;
+    padding-bottom: 3em;
     z-index: 1;
     position: relative;
     border-radius: 3em 3em 0 0;
@@ -92,6 +95,7 @@
         box-shadow: $card-shaddow;
         overflow: hidden;
         animation: slideUp 900ms ease-in-out 1 ;
+        cursor: pointer;
 
         &__info{
         padding: .6em;
@@ -164,13 +168,60 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 4em;
+    margin-top: 3em;
     &__order{
         text-decoration: none;
         color: white;
         border-radius: 3em;
         background-image: $grad-clr;
-        padding: .5em 2em;
+        padding: .6em 2em;
     }
+
+}
+
+@media all and (min-width: 900px){
+.hero { 
+    &__img{
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+    }
+}   
+
+.menu{
+
+    &__info{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 2em 0 0 0;
+
+
+    }
+    &__category{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    }
+
+    &__meals{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    }
+
+    &__item{
+    width: 30%;
+    margin: 0 ;
+        &__title{
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
+}
+
 
 }

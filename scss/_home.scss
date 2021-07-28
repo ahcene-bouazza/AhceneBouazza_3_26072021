@@ -1,0 +1,190 @@
+.loader{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    animation: loading 1s both;
+    
+        div{
+        width: 100px;
+        height: 100px;
+        border: 8px solid transparent;
+        border-top-color: $prim-clr;
+        border-radius: 50%;
+        position: absolute;
+        animation: spin 1.3s linear 3;
+        }
+        div:nth-child(2){
+        width: 100px;
+        height: 100px;
+        border: 8px solid transparent;
+        border-bottom-color: $prim-clr;
+        border-radius: 50%;
+        position: absolute;
+        animation: spin2 1.3s linear 3 both;
+        }
+    }
+    
+header{
+        display: flex;
+        justify-content: center;
+        padding: 1em;
+        box-shadow: 0em .2em 0.4em $darken-gray-clr;
+        position: relative;
+        
+        .header__return{
+            display: none;
+        }
+    }
+    
+.search{
+    
+        &__location{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $medium-gray-clr;
+            margin: 0px;
+            &__marker{
+                padding-right: 1em;
+            }
+        }
+    
+        &__hero{
+            background-color: $light-gray-clr;
+            padding: 2em;
+            text-align: center;
+            h1{
+                margin: 0;
+            }
+            a{
+                display: inline-block;
+                text-decoration: none;
+                margin-top: .6em;
+                padding: 0.6em 1em ;
+                background-image: $grad-clr;
+                background-position: top;
+                border-radius: 2em;
+                color: white;
+            }
+        }
+    }
+    
+.instruction{
+        margin-top: 2em;
+        &__title{
+            margin: 0.7em;
+        }
+        &__wraper{
+            margin : 0 1em;
+            display: flex;
+            align-items: center;
+            padding : .5em 0;
+    
+            .wraper__number {
+                background-color: $prim-clr;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0.3em 0.6em;
+                color: white;
+                border-radius: 50%;
+                font-size: 0.8em;
+                z-index: 1;
+            }
+    
+            .wraper__info {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                border-radius: .8em;
+                box-shadow: $card-shaddow;
+                background-color: $light-gray-clr;
+                margin-left: -0.7em;
+                padding: 0 2em;
+                transition: 300ms ease-in-out;
+                    .wraper__info__icon{
+                     color: $icon-gray-clr;
+                     margin-right: 1em;
+                    }
+                &:hover {
+                background-color: rgba($prim-clr, 0.5);
+                .wraper__info__icon{
+                    color: $prim-clr;
+                   }
+                }
+                }
+            }
+    }
+    
+.result {
+        background-color: $light-gray-clr;
+        margin-top: 3em;
+        padding: 1em;
+       
+        &__card {
+            cursor: pointer;
+            background-color: white;
+            box-shadow: $card-shaddow;
+            border-radius: 1.5em;
+            overflow: hidden;
+            margin-bottom: 2em;
+            
+            &__banner{
+            position: relative;
+                &__img{
+                    height: 15em;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: bottom;
+                }
+                &__label{
+                    background-color: $tert-clr;
+                    border-radius: 0.2em;
+                    padding: .5em 1em;
+                    color: darken($tert-clr, $amount: 35%);
+                    font-weight: 700;
+                    position: absolute;
+                    top: 1em;
+                    right: 1em;
+                }
+    
+            }
+    
+        &__info{
+            display: flex;
+            justify-content: space-between;
+            padding: 1em;
+            
+                 h3{
+                margin: 0;
+                padding: 0;}
+    
+                &__icon{
+                
+                .fa-heart{
+                font-size: 2em;}
+                
+    
+                .heart1{display: none;}
+                .heart2{ display: inline-block;}
+    
+                &:hover{
+                .heart1{ display: inline-block;
+                    background: $grad-clr;
+                    background-clip: text;
+                    color:transparent;
+                }
+                .heart2{ display: none;}
+                }
+    
+    
+            }
+    
+            }
+        }
+    }
+    

@@ -1,0 +1,28 @@
+.footer{
+    background-color: #353535;
+    color: white;
+    padding: 1em;
+
+    p{
+        margin: 0;
+    }
+
+    &__li{
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5em;
+
+        &__icon{
+            margin-right: 1em;
+        }
+        .fa-hands-helping{
+            width: 0.8em;
+        }
+    }
+
+    &_logo{
+        fill: white;
+        width: 7em;
+    }
+}

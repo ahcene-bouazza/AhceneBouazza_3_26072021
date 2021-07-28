@@ -1,0 +1,32 @@
+/* loader animation */
+
+@keyframes loading {
+    0%{ opacity: 100; z-index: 10;}
+    70%{ opacity: 50; z-index: 10;}
+    100%{ opacity: 0; z-index: -1;}
+    
+}
+@keyframes spin {
+    0%{ transform: rotate(0deg); border-width: 8px;}
+    50%{ transform: rotate(180deg); border-width: 1px;}
+    100%{ transform: rotate(360deg); border-width: 8px; }
+}
+@keyframes spin2 {
+    0%{ transform: rotate(0deg); border-width: 1px; }
+    50%{ transform: rotate(180deg); border-width: 8px;}
+    100%{ transform: rotate(360deg); border-width: 1px;}
+}
+
+/* menu card slide up*/
+
+@keyframes slideUp {
+    0%{
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+

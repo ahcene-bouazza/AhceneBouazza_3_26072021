@@ -1,46 +1,17 @@
-$prim-clr: #9356DC;
-$sec-clr: #FF79DA;
-$tert-clr: #99E2D0;
-$icon-gray-clr: #686868;
-$darken-gray-clr: #272727;
-$medium-gray-clr : #EAEAEA;
-$light-gray-clr:#F6F6F6;
-$footer-clr:#353535;
-$grad-clr: linear-gradient(#ff79da, #9356dc);
-$font-size: 12px ;
-$card-shaddow : 0em .2em 0.6em rgb(212, 212, 212);
-$delay: 300ms ;
-
-@keyframes slideUp {
-    0%{
-        transform: translateY(30px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-
-*{
-box-sizing: border-box;
-}
-
-body{
-    margin: 0;
-    font-family: "roboto", sans-serif;
-}
-
-header{
+.header-menu{
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 1em;
     box-shadow: 0em .2em 0.4em $darken-gray-clr;
     position: relative;
     
     .header__return{
-        display: none;
+        display: flex;
+        position: absolute;
+        left: 1em;
+        font-size: 2em;
+        
     }
 }
 
@@ -202,34 +173,4 @@ header{
         padding: .5em 2em;
     }
 
-}
-
-
-.footer{
-    background-color: #353535;
-    color: white;
-    padding: 1em;
-
-    p{
-        margin: 0;
-    }
-
-    &__li{
-        list-style-type: none;
-        display: flex;
-        align-items: center;
-        margin-bottom: 0.5em;
-
-        &__icon{
-            margin-right: 1em;
-        }
-        .fa-hands-helping{
-            width: 0.8em;
-        }
-    }
-
-    &_logo{
-        fill: white;
-        width: 7em;
-    }
 }

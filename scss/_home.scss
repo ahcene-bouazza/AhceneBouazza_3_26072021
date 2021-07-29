@@ -26,6 +26,10 @@
         position: absolute;
         animation: spin2 1.3s linear 3 both;
         }
+        img{
+        width: 70px;
+        position: absolute;
+        }
     }
     
 .header{
@@ -49,27 +53,54 @@
             align-items: center;
             background-color: $medium-gray-clr;
             margin: 0px;
+
+            input{
+                border: none;
+                background-color: transparent;
+            }
+
+            input:focus{
+                outline: none;
+            }
+            input::placeholder{
+                outline: none;  
+
+            }
+
             &__marker{
+                margin-left: 3em;
                 padding-right: 1em;
             }
+            &__markerinfo{
+                padding: 1em 0;
+            }
+
         }
-    
+        
         &__hero{
             background-color: $light-gray-clr;
             padding: 2em;
             text-align: center;
+
             h1{
                 margin: 0;
             }
+
             a{
                 display: inline-block;
                 text-decoration: none;
                 margin-top: .6em;
                 padding: 0.6em 1em ;
-                background-image: $grad-clr;
                 background-position: top;
                 border-radius: 2em;
                 color: white;
+                background-image: $grad-clr;
+                box-shadow: $btn-shaddow ;
+                transition: box-shadow 300ms ease-in-out, background-image 200ms ease-in;
+            }
+            a:hover{
+                background-image: $grad-hover-clr;
+                box-shadow: $btn-hover-shaddow ;
             }
         }
     }
@@ -172,23 +203,39 @@
                 padding: 0;}
     
                 &__icon{
+                position: relative;
+                display: flex;
+                margin-right: 1em;
+                justify-content: center;
                 
                 .fa-heart{
-                font-size: 2em;}
-                
-    
-                .heart1{display: none;}
-                .heart2{ display: inline-block;}
-    
-                &:hover{
-                .heart1{ display: inline-block;
-                    background: $grad-clr;
+                font-size: 2em;
+                }
+                  
+                .heart1{
+                    position: absolute;
+                    background-image: $grad-clr;
                     background-clip: text;
-                    color:transparent;
+                    color: transparent;
+                    opacity: 0;
+                    transition: opacity 300ms ease-out;
                 }
-                .heart2{ display: none;}
+                .heart2{ 
+                    position: absolute;
+                    opacity: 1;
+                    transition: opacity 300ms ease-out;
                 }
-    
+
+                &:hover{
+
+                    .heart1{
+                        opacity: 1;
+                    }
+                    .heart2{ 
+                        opacity: 0;
+                    }
+
+                }
     
             }
     

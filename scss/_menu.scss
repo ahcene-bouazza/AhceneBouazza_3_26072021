@@ -178,8 +178,14 @@
         text-decoration: none;
         color: white;
         border-radius: 3em;
-        background-image: $grad-clr;
         padding: .6em 2em;
+        background-image: $grad-clr;
+        box-shadow: $btn-shaddow ;
+        transition: box-shadow 300ms ease-in-out, background-image 200ms ease-in;
+    }
+    &__order:hover{
+        background-image: $grad-hover-clr;
+        box-shadow: $btn-hover-shaddow ;
     }
 
 }

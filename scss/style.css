@@ -177,6 +177,11 @@ body {
           animation: spin2 1.3s linear 3 both;
 }
 
+.loader img {
+  width: 70px;
+  position: absolute;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -209,8 +214,38 @@ body {
   margin: 0px;
 }
 
+.search__location input {
+  border: none;
+  background-color: transparent;
+}
+
+.search__location input:focus {
+  outline: none;
+}
+
+.search__location input::-webkit-input-placeholder {
+  outline: none;
+}
+
+.search__location input:-ms-input-placeholder {
+  outline: none;
+}
+
+.search__location input::-ms-input-placeholder {
+  outline: none;
+}
+
+.search__location input::placeholder {
+  outline: none;
+}
+
 .search__location__marker {
+  margin-left: 3em;
   padding-right: 1em;
+}
+
+.search__location__markerinfo {
+  padding: 1em 0;
 }
 
 .search__hero {
@@ -228,11 +263,24 @@ body {
   text-decoration: none;
   margin-top: .6em;
   padding: 0.6em 1em;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
-  background-image: linear-gradient(#ff79da, #9356dc);
   background-position: top;
   border-radius: 2em;
   color: white;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff58d0), to(#7a3dc5));
+  background-image: linear-gradient(#ff58d0, #7a3dc5);
+  -webkit-box-shadow: 0em 0.1em 0.3em #b3b3b3;
+          box-shadow: 0em 0.1em 0.3em #b3b3b3;
+  -webkit-transition: background-image 200ms ease-in, -webkit-box-shadow 300ms ease-in-out;
+  transition: background-image 200ms ease-in, -webkit-box-shadow 300ms ease-in-out;
+  transition: box-shadow 300ms ease-in-out, background-image 200ms ease-in;
+  transition: box-shadow 300ms ease-in-out, background-image 200ms ease-in, -webkit-box-shadow 300ms ease-in-out;
+}
+
+.search__hero a:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  -webkit-box-shadow: 0em 0.2em 0.4em #666666;
+          box-shadow: 0em 0.2em 0.4em #666666;
 }
 
 .instruction {
@@ -369,28 +417,45 @@ body {
   padding: 0;
 }
 
+.result__card__info__icon {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 1em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .result__card__info__icon .fa-heart {
   font-size: 2em;
 }
 
 .result__card__info__icon .heart1 {
-  display: none;
+  position: absolute;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff58d0), to(#7a3dc5));
+  background-image: linear-gradient(#ff58d0, #7a3dc5);
+  background-clip: text;
+  color: transparent;
+  opacity: 0;
+  -webkit-transition: opacity 300ms ease-out;
+  transition: opacity 300ms ease-out;
 }
 
 .result__card__info__icon .heart2 {
-  display: inline-block;
+  position: absolute;
+  opacity: 1;
+  -webkit-transition: opacity 300ms ease-out;
+  transition: opacity 300ms ease-out;
 }
 
 .result__card__info__icon:hover .heart1 {
-  display: inline-block;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
-  background: linear-gradient(#ff79da, #9356dc);
-  background-clip: text;
-  color: transparent;
+  opacity: 1;
 }
 
 .result__card__info__icon:hover .heart2 {
-  display: none;
+  opacity: 0;
 }
 
 @media all and (min-width: 900px) {
@@ -517,8 +582,8 @@ body {
 
 .menu__info__icon:hover .heart1 {
   display: inline-block;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
-  background: linear-gradient(#ff79da, #9356dc);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff58d0), to(#7a3dc5));
+  background: linear-gradient(#ff58d0, #7a3dc5);
   background-clip: text;
   color: transparent;
 }
@@ -683,9 +748,22 @@ body {
   text-decoration: none;
   color: white;
   border-radius: 3em;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
-  background-image: linear-gradient(#ff79da, #9356dc);
   padding: .6em 2em;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff58d0), to(#7a3dc5));
+  background-image: linear-gradient(#ff58d0, #7a3dc5);
+  -webkit-box-shadow: 0em 0.1em 0.3em #b3b3b3;
+          box-shadow: 0em 0.1em 0.3em #b3b3b3;
+  -webkit-transition: background-image 200ms ease-in, -webkit-box-shadow 300ms ease-in-out;
+  transition: background-image 200ms ease-in, -webkit-box-shadow 300ms ease-in-out;
+  transition: box-shadow 300ms ease-in-out, background-image 200ms ease-in;
+  transition: box-shadow 300ms ease-in-out, background-image 200ms ease-in, -webkit-box-shadow 300ms ease-in-out;
+}
+
+.btn__order:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  -webkit-box-shadow: 0em 0.2em 0.4em #666666;
+          box-shadow: 0em 0.2em 0.4em #666666;
 }
 
 @media all and (min-width: 900px) {

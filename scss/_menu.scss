@@ -50,21 +50,44 @@
     margin: 0;
 
     &__icon{
-    .fa-heart{
+        position: relative;
+        display: flex;
+        margin-right: .5em;
+        justify-content: center;
+        margin-bottom: 1.5em;
+        
+        .fa-heart{
         font-size: 1.5em;
-    }
-    .heart1{display: none;}
-    .heart2{ display: inline-block;}
-    
-    &:hover{
-        .heart1{ display: inline-block;
-            background: $grad-clr;
+        }
+          
+        .heart1{
+            position: absolute;
+            background-image: $grad-clr;
             background-clip: text;
-            color:transparent;
+            color: transparent;
+            opacity: 0;
+            transition: opacity 300ms ease-out;
         }
-        .heart2{ display: none;}
+        .heart2{ 
+            position: absolute;
+            opacity: 1;
+            transition: opacity 300ms ease-out;
         }
-}
+
+        &:hover{
+
+            .heart1{
+                opacity: 1;
+            }
+            .heart2{ 
+                opacity: 0;
+            }
+
+        }
+
+    }
+
+
     }
 
     &__category{
